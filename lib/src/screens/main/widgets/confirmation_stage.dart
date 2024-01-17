@@ -1,11 +1,12 @@
 import 'dart:async';
+
+import 'package:circular_countdown_timer/circular_countdown_timer.dart';
 import 'package:flutter/material.dart';
 import 'package:fmr/src/blocs/main/main_bloc_provider.dart';
 import 'package:fmr/src/blocs/ui/ui_bloc_provider.dart';
 import 'package:fmr/src/style/colors.dart';
 import 'package:fmr/src/style/theme.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
-import 'package:circular_countdown_timer/circular_countdown_timer.dart';
 
 class ConfirmationStage extends StatefulWidget {
   const ConfirmationStage({Key? key}) : super(key: key);
@@ -58,7 +59,12 @@ class _ConfirmationStageState extends State<ConfirmationStage> {
   void snackBar(String? message) {
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
-        content: Directionality(textDirection: TextDirection.rtl, child: Text(message!)),
+        content: Directionality(
+            textDirection: TextDirection.rtl,
+            child: Text(
+              message!,
+              style: Theme.of(context).textTheme.headlineSmall,
+            )),
         duration: const Duration(seconds: 2),
       ),
     );

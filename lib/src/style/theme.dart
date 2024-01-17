@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
+
 import 'colors.dart';
 
 final darkTheme = ThemeData(
@@ -12,6 +13,7 @@ final darkTheme = ThemeData(
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(20.0),
         ),
+        textStyle: const TextStyle(color: darkTextColor, fontSize: 14),
         elevation: 4,
         backgroundColor: buttonColor,
       ),
@@ -37,6 +39,7 @@ final lightTheme = ThemeData(
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(20.0),
       ),
+      textStyle: const TextStyle(color: lightTextColor, fontSize: 14),
       elevation: 4,
       backgroundColor: buttonColor,
     ),

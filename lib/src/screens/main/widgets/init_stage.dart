@@ -40,9 +40,9 @@ class InitStage extends StatelessWidget {
         onPressed: () {
           MainBlocProvider.of(context).onStageChange();
         },
-        child: const Padding(
-          padding: EdgeInsets.symmetric(horizontal: 20),
-          child: Text('שליחת קוד אימות', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14)),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20),
+          child: Text('שליחת קוד אימות', style: Theme.of(context).textTheme.headlineSmall),
         ));
   }
 }

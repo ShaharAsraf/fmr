@@ -42,8 +42,9 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
                 },
                 activeTrackColor: scaffoldBackground,
                 activeColor: primaryColor,
+                inactiveTrackColor: Colors.white,
               ),
-              const Icon(CupertinoIcons.moon_fill, color: nightColor),
+              Icon(CupertinoIcons.moon_fill, color: isDark ? darkNightColor : lightNightColor),
             ],
           );
         });
